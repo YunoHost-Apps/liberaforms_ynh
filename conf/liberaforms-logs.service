@@ -1,5 +1,5 @@
 [Unit]
-Description=Liberaforms: creat and manage simple web Forms
+Description=Liberaforms:
 After=network.target
 
 [Service]
