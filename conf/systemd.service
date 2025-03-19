@@ -7,7 +7,7 @@ Type=simple
 User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
-ExecStart=__INSTALL_DIR__/venv/bin/gunicorn --config __DATA_DIR__/gunicorn.conf.py wsgi.py
+ExecStart=__INSTALL_DIR__/venv/bin/gunicorn wsgi.py
 
 ### Depending on specificities of your service/app, you may need to tweak these
 ### .. but this should be a good baseline
