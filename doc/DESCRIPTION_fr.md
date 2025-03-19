@@ -1,0 +1,1 @@
+LiberaForms est un logiciel facile à utiliser pour créer et gérer des formulaires web simples et leurs réponses (données collectées).
