@@ -27,7 +27,7 @@ their Answers (collected data).
 
 ## Schermafdrukken
 
-![Schermafdrukken van Liberaforms](./doc/screenshots/example.jpg)
+![Schermafdrukken van Liberaforms](./doc/screenshots/screenshot.png)
 
 ## Documentatie en bronnen
 

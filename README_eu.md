@@ -27,7 +27,7 @@ their Answers (collected data).
 
 ## Pantaila-argazkiak
 
-![Liberaforms(r)en pantaila-argazkia](./doc/screenshots/example.jpg)
+![Liberaforms(r)en pantaila-argazkia](./doc/screenshots/screenshot.png)
 
 ## Dokumentazioa eta baliabideak
 

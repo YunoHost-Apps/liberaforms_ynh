@@ -27,7 +27,7 @@ their Answers (collected data).
 
 ## Zrzuty ekranu
 
-![Zrzut ekranu z Liberaforms](./doc/screenshots/example.jpg)
+![Zrzut ekranu z Liberaforms](./doc/screenshots/screenshot.png)
 
 ## Dokumentacja i zasoby
 

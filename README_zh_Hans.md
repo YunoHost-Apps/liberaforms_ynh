@@ -27,7 +27,7 @@ their Answers (collected data).
 
 ## 截图
 
-![Liberaforms 的截图](./doc/screenshots/example.jpg)
+![Liberaforms 的截图](./doc/screenshots/screenshot.png)
 
 ## 文档与资源
 
