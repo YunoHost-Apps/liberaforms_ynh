@@ -26,7 +26,7 @@ LiberaForms est un logiciel facile à utiliser pour créer et gérer des formula
 
 ## Captures d’écran
 
-![Capture d’écran de Liberaforms](./doc/screenshots/example.jpg)
+![Capture d’écran de Liberaforms](./doc/screenshots/screenshot.png)
 
 ## Documentations et ressources
 
