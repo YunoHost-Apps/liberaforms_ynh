@@ -27,7 +27,7 @@ their Answers (collected data).
 
 ## Tangkapan Layar
 
-![Tangkapan Layar pada Liberaforms](./doc/screenshots/example.jpg)
+![Tangkapan Layar pada Liberaforms](./doc/screenshots/screenshot.png)
 
 ## Dokumentasi dan sumber daya
 

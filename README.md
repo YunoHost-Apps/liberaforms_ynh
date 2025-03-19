@@ -27,7 +27,7 @@ their Answers (collected data).
 
 ## Screenshots
 
-![Screenshot of Liberaforms](./doc/screenshots/example.jpg)
+![Screenshot of Liberaforms](./doc/screenshots/screenshot.png)
 
 ## Documentation and resources
 
