@@ -27,7 +27,7 @@ their Answers (collected data).
 
 ## Capturas de pantalla
 
-![Captura de pantalla de Liberaforms](./doc/screenshots/example.jpg)
+![Captura de pantalla de Liberaforms](./doc/screenshots/screenshot.png)
 
 ## Documentación e recursos
 
