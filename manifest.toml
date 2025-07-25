@@ -55,8 +55,9 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://gitlab.com/liberaforms/liberaforms/-/archive/v4.0.0/liberaforms-v4.0.0.tar.gz"
-    sha256 = "a37e6198b79dedf97efc95272cc87ccc265476ecc760b8c54a7d131b01607e8a"
+    url = "https://codeberg.org/LiberaForms/server/archive/v4.1.2.tar.gz"
+    sha256 = "da66b1736655a24d8098d3c9f2f5ee654cb6232a51ddf8b9b79265100127c71a"
+    autoupdate.strategy = "latest_forgejo_release"
 
     [resources.system_user]
 
