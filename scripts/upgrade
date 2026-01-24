@@ -19,7 +19,7 @@ ynh_systemctl --service="$app" --action="stop"
 #=================================================
 ynh_script_progression "Upgrading source files..."
 
-ynh_setup_source --dest_dir="$install_dir" --full_replace --keep=".env"
+ynh_setup_source --dest_dir="$install_dir" --full_replace --keep=".env gunicorn.py"
 
 #=================================================
 # UPDATE A CONFIG FILE
@@ -45,10 +45,14 @@ yunohost service add "$app" --description="Creat and manage simple web Forms" --
 ynh_script_progression "Installing Python dependencies..."
 
 pushd $install_dir
-    python3 -m venv $install_dir/venv
+    source $install_dir/venv/bin/activate
     ynh_hide_warnings $install_dir/venv/bin/pip install --upgrade pip 
     ynh_hide_warnings $install_dir/venv/bin/pip install -r ./requirements.txt
+    flask db upgrade
+    deactivate
 popd
+
+chown -R $app:www-data $install_dir
 
 #=================================================
 # START SYSTEMD SERVICE
