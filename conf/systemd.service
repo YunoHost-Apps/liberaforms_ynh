@@ -8,7 +8,7 @@ User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
 EnvironmentFile=__INSTALL_DIR__/.env
-ExecStart=__INSTALL_DIR__/venv/bin/gunicorn wsgi.py
+ExecStart=__INSTALL_DIR__/venv/bin/gunicorn b localhost:__PORT__ -w 4 wsgi:app
 LogsDirectory=__APP__
 
 # Sandboxing options to harden security
