@@ -29,6 +29,7 @@ ynh_setup_source --dest_dir="$install_dir"
 ynh_script_progression "Adding $app's configuration files..."
 
 ynh_config_add --template=".env" --destination="$install_dir/.env"
+ynh_config_add --template="gunicorn.conf.py" --destination="$install_dir/gunicorn.py"
 
 #=================================================
 # INSTALL PYTHON DEPENDENCIES
