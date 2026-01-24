@@ -27,6 +27,7 @@ ynh_setup_source --dest_dir="$install_dir" --full_replace --keep=".env gunicorn.
 ynh_script_progression "Updating $app's configuration files..."
 
 email=$(ynh_user_get_info --username="$admin" --key=mail)
+key=$(ynh_app_setting_get --app=$app --key=key)
 
 ynh_config_add --template=".env" --destination="$install_dir/.env"
 
