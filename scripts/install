@@ -15,7 +15,9 @@ key=$(ynh_string_random --length=36)
 ynh_app_setting_set --key=key --value=$key
 
 email=$(ynh_user_get_info --username="$admin" --key=mail)
-timezone=$(cat /etc/timezone)
+
+timezone="$(timedatectl show --value --property=Timezone)"
+ynh_app_setting_set --key=timezone --value=$timezone
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
