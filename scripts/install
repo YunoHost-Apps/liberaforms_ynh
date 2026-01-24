@@ -39,7 +39,11 @@ pushd $install_dir
     python3 -m venv $install_dir/venv
     ynh_hide_warnings $install_dir/venv/bin/pip install --upgrade pip 
     ynh_hide_warnings $install_dir/venv/bin/pip install -r ./requirements.txt
+    flask database create-tables
+    flask db stamp head
 popd
+
+chown -R $app:www-data $install_dir
 
 #=================================================
 # SYSTEM CONFIGURATION
