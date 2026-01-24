@@ -28,6 +28,7 @@ ynh_script_progression "Updating $app's configuration files..."
 
 email=$(ynh_user_get_info --username="$admin" --key=mail)
 key=$(ynh_app_setting_get --app=$app --key=key)
+timezone=$(ynh_app_setting_get --app=$app --key=timezone)
 
 ynh_config_add --template=".env" --destination="$install_dir/.env"
 
