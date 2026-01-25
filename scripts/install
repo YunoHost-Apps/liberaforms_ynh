@@ -48,7 +48,7 @@ pushd $install_dir
     ynh_hide_warnings $install_dir/venv/bin/pip install -r ./requirements.txt
     flask database create-tables
     flask db stamp head
-    flask smtp set -host=$domain -port=587 -user=$app -noreply=$app@$domain -password='$mail_pwd' -encryption=STARTTLS
+    flask smtp set -host=localhost -port=25 -noreply=noreply@$domain
     deactivate
 popd
 
