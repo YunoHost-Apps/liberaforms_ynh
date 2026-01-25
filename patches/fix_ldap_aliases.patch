@@ -1,0 +1,20 @@
+--- a/liberaforms/utils/ldap.py
++++ b/liberaforms/utils/ldap.py
+@@ -73,9 +73,15 @@
+     unpacked = []
+     for entry in entries:
++        # Handle multi-value email attributes (aliases)
++        raw_email = entry[current_app.config['LDAP_MAIL_ATTRIB']].value
++        if isinstance(raw_email, list):
++            email = str(raw_email[0])
++        else:
++            email = str(raw_email)
++
+         data = {
+             'dn': entry.entry_dn,
+             'class': str(entry['structuralObjectClass']),
+-            'email': str(entry[current_app.config['LDAP_MAIL_ATTRIB']]),
++            'email': email,
+             'entryUUID':  str(entry['entryUUID'])
+         }
+         unpacked.append(data)
