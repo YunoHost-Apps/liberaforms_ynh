@@ -27,8 +27,6 @@ ynh_config_change_url_nginx
 #=================================================
 ynh_script_progression "Adding $app's configuration files..."
 
-admin_mails=$(ynh_app_setting_get --app=$app --key=admin_mails)
-
 email=$(ynh_user_get_info --username="$admin" --key=mail)
 key=$(ynh_app_setting_get --app=$app --key=key)
 timezone=$(ynh_app_setting_get --app=$app --key=timezone)
