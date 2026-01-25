@@ -7,14 +7,13 @@ name = "Liberaforms"
 description.en = "Creat and manage simple web Forms"
 description.fr = "Créer et gérer des formulaires web simples"
 
-version = "4.0.0~ynh1"
+version = "4.2.0~ynh1"
 
 maintainers = ["eric_G"]
 
 [upstream]
 license = "AGPL-3.0-only"
 website = "https://www.liberaforms.org"
-demo = "https://demo.example.com"
 admindoc = "https://docs.liberaforms.org"
 code = "https://gitlab.com/liberaforms/liberaforms"
 
@@ -24,8 +23,7 @@ helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
 
-ldap = false
-
+ldap = true
 sso = false
 
 disk = "50M"
@@ -55,8 +53,10 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://gitlab.com/liberaforms/liberaforms/-/archive/v4.0.0/liberaforms-v4.0.0.tar.gz"
-    sha256 = "a37e6198b79dedf97efc95272cc87ccc265476ecc760b8c54a7d131b01607e8a"
+    url = "https://codeberg.org/LiberaForms/server/archive/v4.2.0.tar.gz"
+    sha256 = "4c5136c44cc5641df83c026c9bd2ec50a4c98b1f3ee36e36a6a448174699e8c7"
+    
+    autoupdate.strategy = "latest_forgejo_release"
 
     [resources.system_user]
 

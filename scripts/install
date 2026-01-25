@@ -11,9 +11,13 @@ source /usr/share/yunohost/helpers
 # INITIALIZE AND STORE SETTINGS
 #=================================================
 
-key=$(ynh_string_random --length=24)
+key=$(ynh_string_random --length=36)
+ynh_app_setting_set --key=key --value=$key
+
 email=$(ynh_user_get_info --username="$admin" --key=mail)
-timezone=$(cat /etc/timezone)
+
+timezone="$(timedatectl show --value --property=Timezone)"
+ynh_app_setting_set --key=timezone --value=$timezone
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
@@ -29,6 +33,7 @@ ynh_setup_source --dest_dir="$install_dir"
 ynh_script_progression "Adding $app's configuration files..."
 
 ynh_config_add --template=".env" --destination="$install_dir/.env"
+ynh_config_add --template="gunicorn.conf.py" --destination="$install_dir/gunicorn.py"
 
 #=================================================
 # INSTALL PYTHON DEPENDENCIES
@@ -37,9 +42,16 @@ ynh_script_progression "Installing Python dependencies..."
 
 pushd $install_dir
     python3 -m venv $install_dir/venv
+    echo "source $install_dir/venv/bin/activate" >> $install_dir/.bashrc
+    source $install_dir/venv/bin/activate
     ynh_hide_warnings $install_dir/venv/bin/pip install --upgrade pip 
     ynh_hide_warnings $install_dir/venv/bin/pip install -r ./requirements.txt
+    flask database create-tables
+    flask db stamp head
+    deactivate
 popd
+
+chown -R $app:www-data $install_dir
 
 #=================================================
 # SYSTEM CONFIGURATION

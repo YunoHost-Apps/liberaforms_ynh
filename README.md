@@ -11,13 +11,16 @@ It shall NOT be edited by hand.
 Creat and manage simple web Forms
 
 [![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://www.liberaforms.org)
-[![App Demo](https://img.shields.io/badge/App_Demo-blue?style=for-the-badge)](https://demo.example.com)
-[![Version: 4.0.0~ynh1](https://img.shields.io/badge/Version-4.0.0~ynh1-rgba(0,150,0,1)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/liberaforms/)
+[![Version: 4.2.0~ynh1](https://img.shields.io/badge/Version-4.2.0~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/liberaforms/)
 
 <div align="center">
 <a href="https://apps.yunohost.org/app/liberaforms"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_more_info_on_the_appstore.svg"/></a>
 <a href="https://github.com/YunoHost-Apps/liberaforms_ynh/issues"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_report_an_issue.svg"/></a>
 </div>
+
+
+## Screenshots
+![Screenshot of Liberaforms](./doc/screenshots/screenshot.png)
 
 ## 📦 Developer info
 
