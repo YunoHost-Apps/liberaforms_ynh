@@ -15,9 +15,6 @@ key=$(ynh_string_random --length=36)
 ynh_app_setting_set --key=key --value=$key
 
 email=$(ynh_user_get_info --username="$admin" --key=mail)
-admin_mails=$(yunohost user info "$admin" --json | jq -c '[.mail] + (."mail-aliases" // [])' | sed "s/\"/'/g")
-ynh_app_setting_set --key=admin_mails --value=$admin_mails
-
 timezone="$(timedatectl show --value --property=Timezone)"
 ynh_app_setting_set --key=timezone --value=$timezone
 
