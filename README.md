@@ -11,7 +11,7 @@ It shall NOT be edited by hand.
 Creat and manage simple web Forms
 
 [![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://www.liberaforms.org)
-[![Version: 4.2.0~ynh1](https://img.shields.io/badge/Version-4.2.0~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/liberaforms/)
+[![Version: 4.6.1~ynh1](https://img.shields.io/badge/Version-4.6.1~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/liberaforms/)
 
 <div align="center">
 <a href="https://apps.yunohost.org/app/liberaforms"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_more_info_on_the_appstore.svg"/></a>
@@ -26,7 +26,7 @@ Creat and manage simple web Forms
 
 [![Automatic tests level](https://apps.yunohost.org/badge/cilevel/liberaforms)](https://ci-apps.yunohost.org/ci/apps/liberaforms/)
 
-🛠️ Upstream Liberaforms repository: <https://gitlab.com/liberaforms/liberaforms>
+🛠️ Upstream Liberaforms repository: <https://codeberg.org/LiberaForms/server>
 
 Pull request are welcome and should target the [`testing` branch](https://github.com/YunoHost-Apps/liberaforms_ynh/tree/testing).
 
