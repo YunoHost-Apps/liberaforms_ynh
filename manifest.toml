@@ -78,7 +78,7 @@ ram.runtime = "50M"
     if [[ $YNH_DEBIAN_VERSION == "bullseye" ]]; then
         echo "mime-support";
     elif [[ $YNH_DEBIAN_VERSION == "bookworm" ]]; then
-        echo "media-types mailcap";
+        echo "media-types mailcap libffi-dev";
     fi
     """
 
