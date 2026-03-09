@@ -43,7 +43,7 @@ pushd $install_dir
     python3 -m venv $install_dir/venv
     echo "source $install_dir/venv/bin/activate" >> $install_dir/.bashrc
     source $install_dir/venv/bin/activate
-    ynh_hide_warnings $install_dir/venv/bin/pip install --upgrade pip 
+    ynh_hide_warnings $install_dir/venv/bin/pip install --upgrade pip typed-ast
     ynh_replace --match="psycopg2==2.9.4" --replace="psycopg2==2.9.11" --file=requirements.txt
     ynh_hide_warnings $install_dir/venv/bin/pip install -r ./requirements.txt
     flask database create-tables
