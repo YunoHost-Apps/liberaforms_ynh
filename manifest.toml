@@ -72,13 +72,13 @@ ram.runtime = "50M"
     main.default = 5000
 
     [resources.apt]
-    packages = "postgresql, python3-venv, python3-dev, gcc, libpq-dev, libcairo2"
+    packages = "postgresql, python3-venv, python3-dev, gcc, libpq-dev, libcairo2, libffi-dev"
 
     packages_from_raw_bash = """
     if [[ $YNH_DEBIAN_VERSION == "bookworm" ]]; then
         echo "mime-support";
     elif [[ $YNH_DEBIAN_VERSION == "trixie" ]]; then
-        echo "media-types mailcap libffi-dev";
+        echo "media-types mailcap";
     fi
     """
 
