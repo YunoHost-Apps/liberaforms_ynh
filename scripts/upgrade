@@ -17,9 +17,18 @@ ynh_systemctl --service="$app" --action="stop"
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
+ynh_script_progression "Upgrading uv..."
+
+    ynh_setup_source --dest_dir="$install_dir/.uv" --source_id="uv"
+    chmod +x "$install_dir/.uv/uv"
+    export PATH="$install_dir/.uv:$PATH"
+    export UV_PYTHON_INSTALL_DIR="$install_dir/.python_runtime"
+    export UV_CACHE_DIR="$install_dir/.uv_cache"
+
 ynh_script_progression "Upgrading source files..."
 
 ynh_setup_source --dest_dir="$install_dir" --full_replace --keep=".env gunicorn.py venv uploads"
+chown -R "$app:www-data" "$install_dir"
 
 #=================================================
 # UPDATE A CONFIG FILE
