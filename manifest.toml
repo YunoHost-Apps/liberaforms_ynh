@@ -58,6 +58,25 @@ ram.runtime = "50M"
     
     autoupdate.strategy = "latest_forgejo_tag"
 
+    [resources.sources.uv]
+    amd64.url = "https://github.com/astral-sh/uv/releases/download/0.10.12/uv-x86_64-unknown-linux-gnu.tar.gz"
+    amd64.sha256 = "ec72570c9d1f33021aa80b176d7baba390de2cfeb1abcbefca346d563bf17484"
+    arm64.url = "https://github.com/astral-sh/uv/releases/download/0.10.12/uv-aarch64-unknown-linux-gnu.tar.gz"
+    arm64.sha256 = "0ed7d20f49f6b9b60d45fdfcac28f3ac01a671a6ef08672401ed2833423fea2a"
+    armhf.url = "https://github.com/astral-sh/uv/releases/download/0.10.12/uv-armv7-unknown-linux-gnueabihf.tar.gz"
+    armhf.sha256 = "eaa02f36d5112029601b18ac3d1a0c03a83bb20cb4154c2f5345f777fa6c4101"
+    i386.url = "https://github.com/astral-sh/uv/releases/download/0.10.12/uv-i686-unknown-linux-gnu.tar.gz"
+    i386.sha256 = "8501844b34e3a28cfbba5a4b857eebd696d952e0bb4160357451ad80f3f49db8"
+    
+    in_subdir = true
+    
+    autoupdate.strategy = "latest_github_release"
+    autoupdate.upstream = "https://github.com/astral-sh/uv"
+    autoupdate.asset.amd64 = "^uv-x86_64-unknown-linux-gnu.tar.gz$"
+    autoupdate.asset.arm64 = "^uv-aarch64-unknown-linux-gnu.tar.gz$"
+    autoupdate.asset.armhf = "^uv-armv7-unknown-linux-gnueabihf.tar.gz$"
+    autoupdate.asset.i386 = "^uv-i686-unknown-linux-gnu.tar.gz$"
+
     [resources.system_user]
     allow_email = true
 
