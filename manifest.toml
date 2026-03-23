@@ -54,7 +54,7 @@ ram.runtime = "50M"
 
     [resources.sources.main]
     url = "https://codeberg.org/LiberaForms/server/archive/v4.8.0.tar.gz"
-    sha256 = "bdd9726fec646b5e2058136f77d3b9eb818b18f9bf460b09f19c85e4c44ab717"
+    sha256 = "2e9fb8e8e6b6a4154739d0b6087ed287998a420ae67449559d7dfa5c250e2443"
     
     autoupdate.strategy = "latest_forgejo_tag"
 
