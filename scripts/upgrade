@@ -59,6 +59,7 @@ ynh_script_progression "Upgrading uv..."
 ynh_script_progression "Installing Python dependencies..."
 
 pushd $install_dir
+    chown -R "$app:www-data" "$install_dir"
     source $install_dir/venv/bin/activate
     ynh_hide_warnings uv pip install --upgrade pip 
     ynh_hide_warnings uv pip install -r ./requirements.txt
