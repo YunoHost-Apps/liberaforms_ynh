@@ -18,13 +18,17 @@ email=$(ynh_user_get_info --username="$admin" --key=mail)
 timezone="$(timedatectl show --value --property=Timezone)"
 ynh_app_setting_set --key=timezone --value=$timezone
 
+python_version=3.11
+
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 ynh_script_progression "Setting up source files..."
 
-# Download, check integrity, uncompress and patch the source from manifest.toml
 ynh_setup_source --dest_dir="$install_dir"
+ynh_setup_source --dest_dir="$install_dir/.uv" --source_id="uv"
+chmod +x "$install_dir/.uv/uv"
+chown -R "$app:www-data" "$install_dir"
 
 #=================================================
 # APP INITIAL CONFIGURATION
@@ -37,14 +41,23 @@ ynh_config_add --template="gunicorn.conf.py" --destination="$install_dir/gunicor
 #=================================================
 # INSTALL PYTHON DEPENDENCIES
 #=================================================
+
+ynh_script_progression "Preparing UV..."
+    export PATH="$install_dir/.uv:$PATH"
+    export UV_PYTHON_INSTALL_DIR="$install_dir/.python_runtime"
+    export UV_CACHE_DIR="$install_dir/.uv_cache"
+    echo "PATH=$install_dir/bin:\$PATH" >> $install_dir/.bashrc 
+    echo "UV_PYTHON_INSTALL_DIR=$install_dir/.python_runtime" >> $install_dir/.bashrc 
+    echo "UV_CACHE_DIR=$install_dir/.uv_cache" >> $install_dir/.bashrc
+    echo 'export PATH=/opt/node_n/bin:$PATH' >> $install_dir/.bashrc
 ynh_script_progression "Installing Python dependencies..."
 
 pushd $install_dir
-    python3 -m venv $install_dir/venv
+    uv venv $install_dir/venv -python $python_version
     echo "source $install_dir/venv/bin/activate" >> $install_dir/.bashrc
     source $install_dir/venv/bin/activate
-    ynh_hide_warnings $install_dir/venv/bin/pip install --upgrade pip 
-    ynh_hide_warnings $install_dir/venv/bin/pip install -r ./requirements.txt
+    ynh_hide_warnings uv pip install --upgrade pip 
+    ynh_hide_warnings uv pip install -r ./requirements.txt
     flask database create-tables
     flask db stamp head
     flask smtp set -host=localhost -port=25 -noreply=noreply@$domain
