@@ -7,7 +7,7 @@ name = "Liberaforms"
 description.en = "Creat and manage simple web Forms"
 description.fr = "Créer et gérer des formulaires web simples"
 
-version = "4.8.1~ynh5"
+version = "4.8.1~ynh6"
 
 maintainers = ["eric_G"]
 
@@ -59,14 +59,14 @@ ram.runtime = "50M"
     autoupdate.strategy = "latest_forgejo_tag"
 
     [resources.sources.uv]
-    amd64.url = "https://github.com/astral-sh/uv/releases/download/0.11.12/uv-x86_64-unknown-linux-gnu.tar.gz"
-    amd64.sha256 = "9acdecddacba550ee616c02bb4616d894352022550c5977524556fd5077ce1d4"
-    arm64.url = "https://github.com/astral-sh/uv/releases/download/0.11.12/uv-aarch64-unknown-linux-gnu.tar.gz"
-    arm64.sha256 = "d6e3e5183e71bbd40400da3d2913743cefb98835d8312a5e7908c33865597515"
-    armhf.url = "https://github.com/astral-sh/uv/releases/download/0.11.12/uv-armv7-unknown-linux-gnueabihf.tar.gz"
-    armhf.sha256 = "432e6a96ecc976861dc884d96ac3aa3cc305abc3bb49d3204544477d4a290c64"
-    i386.url = "https://github.com/astral-sh/uv/releases/download/0.11.12/uv-i686-unknown-linux-gnu.tar.gz"
-    i386.sha256 = "22dbbbcd9088ad3ddefce9be142ce2b127b3950718222413e3890f7fbf4a567d"
+    amd64.url = "https://github.com/astral-sh/uv/releases/download/0.11.15/uv-x86_64-unknown-linux-gnu.tar.gz"
+    amd64.sha256 = "b03e572f010bea94a4a52d42671ba72981e12894f71576181a1d26ff68546da7"
+    arm64.url = "https://github.com/astral-sh/uv/releases/download/0.11.15/uv-aarch64-unknown-linux-gnu.tar.gz"
+    arm64.sha256 = "21a7dd1a03ea17ac0366887455dab15d215b31dba0870dcd65d3714e22f46c81"
+    armhf.url = "https://github.com/astral-sh/uv/releases/download/0.11.15/uv-armv7-unknown-linux-gnueabihf.tar.gz"
+    armhf.sha256 = "eb6a12e3e80e1474c1018edc9541bbe71cdf2248fa17b583dcbcc7bb391ad0c0"
+    i386.url = "https://github.com/astral-sh/uv/releases/download/0.11.15/uv-i686-unknown-linux-gnu.tar.gz"
+    i386.sha256 = "557e329e76072b513e47bcd8b50ca4bad07ec87cb325cbfc05e6069847af06c4"
     
     in_subdir = true
     
