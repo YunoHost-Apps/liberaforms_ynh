@@ -7,7 +7,7 @@ name = "Liberaforms"
 description.en = "Creat and manage simple web Forms"
 description.fr = "Créer et gérer des formulaires web simples"
 
-version = "4.8.1~ynh6"
+version = "4.9.2~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -53,20 +53,20 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://codeberg.org/LiberaForms/server/archive/v4.8.1.tar.gz"
-    sha256 = "a76620f87eb99dd46227d3eedb86e0da65113a157e0328bedfd7722686817148"
+    url = "https://codeberg.org/LiberaForms/server/archive/v4.9.2.tar.gz"
+    sha256 = "df91ca656f9497f3a917eea6ea2230606e4b69d9534b322d94ef6969cf6234a5"
     
     autoupdate.strategy = "latest_forgejo_tag"
 
     [resources.sources.uv]
-    amd64.url = "https://github.com/astral-sh/uv/releases/download/0.11.16/uv-x86_64-unknown-linux-gnu.tar.gz"
-    amd64.sha256 = "74947fe2c03315cf07e82ab3acc703eddef01aba4d5232a98e4c6825ec116131"
-    arm64.url = "https://github.com/astral-sh/uv/releases/download/0.11.16/uv-aarch64-unknown-linux-gnu.tar.gz"
-    arm64.sha256 = "8c9d0f0ee98166ae6ab198747519ba6f25db29d185bd2ae5960ecebc91a5c22a"
-    armhf.url = "https://github.com/astral-sh/uv/releases/download/0.11.16/uv-armv7-unknown-linux-gnueabihf.tar.gz"
-    armhf.sha256 = "71cf33cb511c9fe28ae261c0b4789e1fd9bb84d1bc68828db647b77305a15185"
-    i386.url = "https://github.com/astral-sh/uv/releases/download/0.11.16/uv-i686-unknown-linux-gnu.tar.gz"
-    i386.sha256 = "0d1e427cd3fcc042e85dfc75f6d95e076dff9b930241686969d6706afda21375"
+    amd64.url = "https://github.com/astral-sh/uv/releases/download/0.11.19/uv-x86_64-unknown-linux-gnu.tar.gz"
+    amd64.sha256 = "7035608168e106375b36d0c818d537a889c51a8625fe7f8f7cad5e62b947c368"
+    arm64.url = "https://github.com/astral-sh/uv/releases/download/0.11.19/uv-aarch64-unknown-linux-gnu.tar.gz"
+    arm64.sha256 = "83b13ab184a45b7d9a3b0e4b10eaebd50ad41e66cb16dcce8e60aa7be13ae399"
+    armhf.url = "https://github.com/astral-sh/uv/releases/download/0.11.19/uv-armv7-unknown-linux-gnueabihf.tar.gz"
+    armhf.sha256 = "56c307d18acadb1bee2b76bde39cedcf0d29f93102c52f39f8c0c8a42dffe96e"
+    i386.url = "https://github.com/astral-sh/uv/releases/download/0.11.19/uv-i686-unknown-linux-gnu.tar.gz"
+    i386.sha256 = "d0ef2e69c44a2763161d5b5f40b722fe81e0d16bed217cbc526fb5a3640802b3"
     
     in_subdir = true
     
