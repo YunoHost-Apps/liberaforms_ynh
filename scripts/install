@@ -53,14 +53,14 @@ ynh_script_progression "Preparing UV..."
 ynh_script_progression "Installing Python dependencies..."
 
 pushd $install_dir
-    uv venv $install_dir/venv --python $python_version
-    echo "source $install_dir/venv/bin/activate" >> $install_dir/.bashrc
-    source $install_dir/venv/bin/activate
+    ynh_hide_warnings uv venv $install_dir/venv --python $python_version
+    ynh_hide_warnings echo "source $install_dir/venv/bin/activate" >> $install_dir/.bashrc
+    ynh_hide_warnings source $install_dir/venv/bin/activate
     ynh_hide_warnings uv pip install --upgrade pip 
     ynh_hide_warnings uv pip install -r ./requirements.txt
-    flask database create-tables
-    flask db stamp head
-    flask smtp set -host=localhost -port=25 -noreply=noreply@$domain
+    ynh_hide_warnings flask database create-tables
+    ynh_hide_warnings flask db stamp head
+    ynh_hide_warnings flask smtp set -host=localhost -port=25 -noreply=noreply@$domain
     deactivate
 popd
 
