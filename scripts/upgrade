@@ -59,10 +59,10 @@ ynh_script_progression "Upgrading uv..."
 ynh_script_progression "Installing Python dependencies..."
 
 pushd $install_dir
-    uv venv $install_dir/venv --python $python_version
-    source $install_dir/venv/bin/activate
+    ynh_hide_warnings uv venv $install_dir/venv --python $python_version
+    ynh_hide_warnings source $install_dir/venv/bin/activate
     ynh_hide_warnings uv pip install -r ./requirements.txt
-    flask db upgrade
+    ynh_hide_warnings flask db upgrade
     deactivate
 popd
 
