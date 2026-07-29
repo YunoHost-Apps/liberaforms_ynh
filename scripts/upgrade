@@ -4,7 +4,6 @@
 # IMPORT GENERIC HELPERS
 #=================================================
 
-source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
@@ -47,7 +46,6 @@ yunohost service add "$app" --description="Creat and manage simple web Forms" --
 #=================================================
 # INSTALL PYTHON DEPENDENCIES
 #=================================================
-
 ynh_script_progression "Upgrading uv..."
 
     ynh_setup_source --dest_dir="$install_dir/.uv" --source_id="uv"
