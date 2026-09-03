@@ -8,7 +8,7 @@ It shall NOT be edited by hand.
   Liberaforms, packaged for YunoHost
 </h1>
 
-Creat and manage simple web Forms
+Creat and manage simple Web Forms
 
 [![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://www.liberaforms.org)
 [![Version: 4.11.0~ynh1](https://img.shields.io/badge/Version-4.11.0~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/liberaforms/)
