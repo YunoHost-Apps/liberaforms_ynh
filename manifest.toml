@@ -4,10 +4,10 @@ packaging_format = 2
 
 id = "liberaforms"
 name = "Liberaforms"
-description.en = "Creat and manage simple web Forms"
-description.fr = "Créer et gérer des formulaires web simples"
+description.en = "Creat and manage simple Web Forms"
+description.fr = "Créer et gérer des formulaires Web simples"
 
-version = "4.10.0~ynh5"
+version = "4.11.0~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -42,8 +42,8 @@ ram.runtime = "50M"
     ask.en = "Choose the application language"
     ask.fr = "Choisissez la langue de l'application"
     type = "select"
-    choices = ["en", "eu", "es", "ca", "cs", "de", "fr", "gl", "ru", "ta"]
-    default = "fr"
+    choices = ["en-US", "es-ES", "gl-ES", "ca-ES", "eu-ES", "cs-CZ", "de-DE", "fr-FR", "ru-RU", "ta-IN", "uk-UA", "zh-CN"]
+    default = "fr-FR"
 
     [install.admin]
     type = "user"
@@ -53,8 +53,8 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://codeberg.org/LiberaForms/server/archive/v4.10.0.tar.gz"
-    sha256 = "e76702ed87bcbad36f5dd968bebd06645648ba9c95ba20804abe4ea7bc4abe8d"
+    url = "https://codeberg.org/LiberaForms/server/archive/v4.11.0.tar.gz"
+    sha256 = "9805221cd34c20b575728d05a540eaca540d63ff602e0d2bd2d7dc28741e8695"
     
     autoupdate.strategy = "latest_forgejo_tag"
 
