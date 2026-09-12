@@ -7,7 +7,7 @@ name = "Liberaforms"
 description.en = "Creat and manage simple Web Forms"
 description.fr = "Créer et gérer des formulaires Web simples"
 
-version = "4.11.0~ynh3"
+version = "4.11.1~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -53,8 +53,8 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    url = "https://codeberg.org/LiberaForms/server/archive/v4.11.0.tar.gz"
-    sha256 = "9805221cd34c20b575728d05a540eaca540d63ff602e0d2bd2d7dc28741e8695"
+    url = "https://codeberg.org/LiberaForms/server/archive/v4.11.1.tar.gz"
+    sha256 = "466df922f02a2693da75863136cfe8b76a909fd9f3a55cbffed6588b6c867446"
     
     autoupdate.strategy = "latest_forgejo_tag"
 
