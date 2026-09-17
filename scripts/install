@@ -26,6 +26,7 @@ ynh_script_progression "Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
 ynh_setup_source --dest_dir="$install_dir/.uv" --source_id="uv"
+
 chmod +x "$install_dir/.uv/uv"
 chown -R "$app:www-data" "$install_dir"
 
