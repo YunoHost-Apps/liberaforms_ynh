@@ -23,6 +23,10 @@ key=$(ynh_app_setting_get --app=$app --key=key)
 timezone=$(ynh_app_setting_get --app=$app --key=timezone)
 python_version=3.11
 
+if ynh_app_upgrading_from_version_before 4.11.1~ynh3; then
+    ynh_app_setting_delete --key=language
+fi
+
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
