@@ -22,6 +22,7 @@ email=$(ynh_user_get_info --username="$admin" --key=mail)
 key=$(ynh_app_setting_get --app=$app --key=key)
 timezone=$(ynh_app_setting_get --app=$app --key=timezone)
 python_version=3.11
+ynh_app_setting_set --key=language --value=fr-FR
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
