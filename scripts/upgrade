@@ -23,6 +23,8 @@ key=$(ynh_app_setting_get --app=$app --key=key)
 timezone=$(ynh_app_setting_get --app=$app --key=timezone)
 python_version=3.11
 
+ynh_app_setting_set_default --key=language --value="en-US"
+
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
